@@ -404,41 +404,7 @@ adb shell settings put global animator_duration_scale 1
 
 ---
 
-## Публикация на GitHub
 
-Репозиторий уже готов к загрузке: README, лицензия и скрипты на месте.
-
-```bash
-cd digma-f4-guide
-git init
-git add .
-git commit -m "Гайд по оптимизации Digma F4 без перепрошивки"
-```
-
-Дальше — либо через веб-интерфейс GitHub (**New repository → upload files**),
-либо через GitHub CLI:
-
-```bash
-gh repo create digma-f4-guide --public --source=. --push
-```
-
-Структура:
-
-```
-digma-f4-guide/
-├── README.md          # сам гайд
-├── LICENSE            # MIT
-├── .gitignore
-└── scripts/
-    ├── audit.sh       # снять исходное состояние
-    ├── optimize.sh    # отключить мусор (по умолчанию dry-run)
-    └── rollback.sh    # вернуть всё обратно
-```
-
-Перед публикацией проверьте, что в репозиторий не попали бэкапы
-(`f4-backup/`, `apk-backup/`) — они в `.gitignore`.
-
----
 
 ## Приложение А. Список пакетов
 
